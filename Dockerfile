@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11-slim-bookworm
 
 # Install system dependencies for Playwright
 RUN apt-get update && apt-get install -y \
@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     ca-certificates \
     fonts-liberation \
+    fonts-unifont \
+    fonts-ubuntu \
     libasound2 \
     libatk-bridge2.0-0 \
     libatk1.0-0 \
@@ -33,7 +35,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Install Playwright browsers
+# Install Playwright browsers with dependencies
 RUN playwright install chromium
 RUN playwright install-deps chromium
 
