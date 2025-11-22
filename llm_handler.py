@@ -14,7 +14,7 @@ class LLMHandler:
             raise ValueError("ANTHROPIC_API_KEY environment variable is not set")
         
         self.client = Anthropic(api_key=api_key)
-        self.model = "claude-sonnet-4-20250429"
+        self.model = "claude-sonnet-4-5-20250929"
         self.analyzer = DataAnalyzer()
     
     def transcribe_audio(self, audio_content):
