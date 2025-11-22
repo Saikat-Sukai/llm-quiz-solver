@@ -115,7 +115,7 @@ curl -X POST http://localhost:5000/quiz \
 
 ## Project Structure
 
-llm-quiz-solver/
+```llm-quiz-solver/
 ├── app.py                    ✅ Main Flask server
 ├── quiz_solver.py            ✅ Quiz solving logic
 ├── browser_handler.py        ✅ Playwright automation
@@ -127,6 +127,7 @@ llm-quiz-solver/
 ├── LICENSE                 ✅ MIT License
 ├── README.md               ✅ Documentation
 └── .env.example            ✅ Environment template (NO .env!)
+```
 
 ## Key Features
 
@@ -166,3 +167,4 @@ llm-quiz-solver/
 
 
 MIT License - See LICENSE file for details
+
