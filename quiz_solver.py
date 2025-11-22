@@ -28,7 +28,7 @@ class QuizSolver:
         """Solve a chain of quizzes until completion or timeout"""
         current_url = self.initial_url
         attempt = 0
-        max_attempts = 20  # Safety limit
+        max_attempts = 5  # Safety limit
         
         logger.info(f"Starting quiz chain at {current_url}")
         
